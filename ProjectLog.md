@@ -22,7 +22,7 @@ Status: In progress
 
 ## Session 01 - Introduction & Setup
 
-Status: Not started
+Status: Completed
 
 Course section: Introduction & Setup, 13 lectures, about 1h 18m.
 
@@ -33,11 +33,11 @@ Course section: Introduction & Setup, 13 lectures, about 1h 18m.
 
 ### Checklist
 
-- [ ] Confirm Unreal Engine 5.6 or the selected course-compatible engine version.
-- [ ] Confirm compiler and IDE setup for this workstation.
-- [ ] Create or validate the starter C++ project.
-- [ ] Compile the fresh project from the IDE or Unreal build tools.
-- [ ] Capture notes on C++ versus Blueprint responsibilities for this project.
+- [x] Confirm Unreal Engine 5.6 or the selected course-compatible engine version.
+- [x] Confirm compiler and IDE setup for this workstation.
+- [x] Create or validate the starter C++ project.
+- [x] Compile the fresh project from the IDE or Unreal build tools.
+- [x] Capture notes on C++ versus Blueprint responsibilities for this project.
 
 ### Related commits
 
@@ -45,7 +45,7 @@ None yet.
 
 ## Session 02 - Obstacle Assault
 
-Status: Not started
+Status: Completed
 
 Course section: Obstacle Assault, 34 lectures, about 4h 35m.
 
@@ -56,18 +56,18 @@ Course section: Obstacle Assault, 34 lectures, about 4h 35m.
 
 ### Checklist
 
-- [ ] Set up the Obstacle Assault project area and test level.
+- [x] Set up the Obstacle Assault project area and test level.
 - [x] Create the first C++ actor class for moving platforms.
-- [ ] Add variables, structs, logging, and arithmetic practice in C++.
+- [x] Add variables, structs, logging, and arithmetic practice in C++.
 - [x] Implement actor movement with `SetActorLocation`, `GetActorLocation`, `Tick`, velocity, and delta time.
 - [x] Refactor movement into functions and member functions.
-- [ ] Add Blueprint child classes for configurable platform behavior.
+- [x] Add Blueprint child classes for configurable platform behavior.
 - [x] Detect travel distance and correct movement overshoot.
 - [x] Add rotating platform behavior.
-- [ ] Import visual assets and build obstacle geometry.
-- [ ] Tune player movement and physics for the level.
-- [ ] Complete the Obstacle Assault level design pass.
-- [ ] Package or otherwise validate a playable build.
+- [x] Import visual assets and build obstacle geometry.
+- [x] Tune player movement and physics for the level.
+- [x] Complete the Obstacle Assault level design pass.
+- [x] Package or otherwise validate a playable build.
 
 ### Related commits
 
@@ -86,11 +86,11 @@ Course section: Dungeon Escape, 50 lectures, about 6h 50m.
 
 ### Checklist
 
-- [ ] Create the Dungeon Escape project area and level.
-- [ ] Set up lighting, materials, and first-person game mode.
+- [x] Create the Dungeon Escape project area and level.
+- [x] Set up lighting, materials, and first-person game mode.
 - [x] Implement a reusable mover actor component.
 - [x] Practice pointer access through component ownership and `GetOwner`.
-- [ ] Move actors with `FMath::VInterpConstantTo` and return movement.
+- [x] Move actors with `FMath::VInterpConstantTo` and return movement.
 - [ ] Create trigger logic with a box component and constructor setup.
 - [ ] Use `FindComponentByClass` to connect trigger and mover behavior.
 - [ ] Bind overlap behavior with C++ delegates.
@@ -111,6 +111,7 @@ Course section: Dungeon Escape, 50 lectures, about 6h 50m.
 ### Related commits
 
 - `58fca5a` - Added a Blueprint-spawnable `UMover` actor component that reads and moves its owning actor through `GetOwner`.
+- `e022f29` - Updated `UMover` to interpolate between start and target locations with `FMath::VInterpConstantTo` and track when it reaches the target.
 
 ## Session 04 - Battle Blaster
 
