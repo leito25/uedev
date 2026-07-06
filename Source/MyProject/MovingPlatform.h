@@ -24,28 +24,26 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	
 	void MovePlatform(float DeltaTime);
+	void RotatePlatform(float DeltaTime);
 	
-	UPROPERTY(EditAnywhere)
-	int NumberOfApples = 0;
-	
-	UPROPERTY(EditAnywhere)
-	int NumberOfOranges = 0;
-	
-	UPROPERTY(VisibleAnywhere)
-	int totalFruits = 0;
-	
+	// MEmbers
 	UPROPERTY(EditAnywhere)
 	FVector PlatformVelocity = FVector(0.0f, 0.0f, 0.0f);
-
 	
+	FVector StartLocation;
+	
+	UPROPERTY(VisibleAnywhere)
+	float DistanceMoved = 0.0;
 	UPROPERTY(EditAnywhere)
-	FVector myLocation = FVector(0.0f, 0.0f, 0.0f);
-
+	float MoveDistance = 0;
+	
 	UPROPERTY(EditAnywhere)
 	FVector startPoint = FVector(0.0f, 0.0f, 0.0f);
 	UPROPERTY(EditAnywhere)
 	FVector endPoint = FVector(0.0f, 0.0f, 0.0f);
 	
+	float GetDistanceMoved();
+	
 	UPROPERTY(EditAnywhere)
-	bool isUp = false;
+	FRotator RotationVelocity;
 };
