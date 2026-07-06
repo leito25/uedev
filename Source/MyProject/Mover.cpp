@@ -2,6 +2,7 @@
 
 
 #include "Mover.h"
+#include "Math/UnrealMathUtility.h"
 
 // Sets default values for this component's properties
 UMover::UMover()
@@ -19,38 +20,38 @@ void UMover::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
-	
-	// GetOwner
-	//AActor* myActor = GetOwner();
-	//auto name = myActor->GetName();
-	//UE_LOG(LogTemp, Warning, TEXT("My Name Actor git status%s "), *name);
-	//UE_LOG(LogTemp, Warning, TEXT("My Name Actor git status%s "), *myActor->GetActorNameOrLabel());
-	
-	//StartLocation = myActor->GetActorLocation();
-	//UE_LOG(LogTemp, Warning, TEXT("Start Location of this is %s "), *StartLocation.ToString());
-	////TODO: Mover the object from startpoint to end point // Just a plan
-	
-	//Avoiding the pointer
-	StartLocation = GetOwner()->GetActorLocation();
-	UE_LOG(LogTemp, Warning, TEXT("%s location is %s"), *GetOwner()->GetActorNameOrLabel(), *StartLocation.ToString());
-	
+	// Implementing Door movement
+	StartLocation = GetOwner()->GetActorLocation();	
 }
+	
 
 
 // Called every frame
 void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
 	
-	//Logging
-	//UE_LOG(LogTemp,Warning,TEXT("Mover Tiking... "));
+	if (ShouldMove)
+	{
+		TargetLocation = StartLocation + MoveOffset;
+	}
+	else
+	{
+		TargetLocation = StartLocation;
+	}
 	
-	// Moving using the Mover Component
 	FVector CurrentLocation = GetOwner()->GetActorLocation();
-	CurrentLocation.Z += DeltaTime * 100;
-	GetOwner()->SetActorLocation(CurrentLocation);
+	
+	ReachedTarget = CurrentLocation.Equals(TargetLocation);
+	
+	if (!ReachedTarget)
+	{
+		float Speed = MoveOffset.Length() / MoveTime; // velocity  = distance/time
+		FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, Speed);
+		GetOwner()->SetActorLocation(NewLocation);
+		UE_LOG(LogTemp, Warning, TEXT("Mover is moving %s"), *NewLocation.ToString());
+	}
+	
+	
 }
 

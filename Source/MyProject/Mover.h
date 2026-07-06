@@ -33,4 +33,7 @@ public:
 	
 	FVector StartLocation;
 	FVector TargetLocation;
+	
+	UPROPERTY(VisibleAnywhere)
+	bool ReachedTarget;
 };

@@ -4,7 +4,7 @@ Source: https://www.udemy.com/course/unrealcourse/
 
 Course: Unreal Engine 5 C++ Game Development (Fully Updated in 5.6)
 
-Status: Not started
+Status: In progress
 
 ## Course Snapshot
 
@@ -57,13 +57,13 @@ Course section: Obstacle Assault, 34 lectures, about 4h 35m.
 ### Checklist
 
 - [ ] Set up the Obstacle Assault project area and test level.
-- [ ] Create the first C++ actor class for moving platforms.
+- [x] Create the first C++ actor class for moving platforms.
 - [ ] Add variables, structs, logging, and arithmetic practice in C++.
-- [ ] Implement actor movement with `SetActorLocation`, `GetActorLocation`, `Tick`, velocity, and delta time.
-- [ ] Refactor movement into functions and member functions.
+- [x] Implement actor movement with `SetActorLocation`, `GetActorLocation`, `Tick`, velocity, and delta time.
+- [x] Refactor movement into functions and member functions.
 - [ ] Add Blueprint child classes for configurable platform behavior.
-- [ ] Detect travel distance and correct movement overshoot.
-- [ ] Add rotating platform behavior.
+- [x] Detect travel distance and correct movement overshoot.
+- [x] Add rotating platform behavior.
 - [ ] Import visual assets and build obstacle geometry.
 - [ ] Tune player movement and physics for the level.
 - [ ] Complete the Obstacle Assault level design pass.
@@ -71,11 +71,11 @@ Course section: Obstacle Assault, 34 lectures, about 4h 35m.
 
 ### Related commits
 
-None yet.
+- `58fca5a` - Added course roadmap tracking and expanded `AMovingPlatform` with tick-driven movement, distance checks, overshoot correction, and local rotation.
 
 ## Session 03 - Dungeon Escape
 
-Status: Not started
+Status: In progress
 
 Course section: Dungeon Escape, 50 lectures, about 6h 50m.
 
@@ -88,8 +88,8 @@ Course section: Dungeon Escape, 50 lectures, about 6h 50m.
 
 - [ ] Create the Dungeon Escape project area and level.
 - [ ] Set up lighting, materials, and first-person game mode.
-- [ ] Implement a reusable mover actor component.
-- [ ] Practice pointer access through component ownership and `GetOwner`.
+- [x] Implement a reusable mover actor component.
+- [x] Practice pointer access through component ownership and `GetOwner`.
 - [ ] Move actors with `FMath::VInterpConstantTo` and return movement.
 - [ ] Create trigger logic with a box component and constructor setup.
 - [ ] Use `FindComponentByClass` to connect trigger and mover behavior.
@@ -110,7 +110,7 @@ Course section: Dungeon Escape, 50 lectures, about 6h 50m.
 
 ### Related commits
 
-None yet.
+- `58fca5a` - Added a Blueprint-spawnable `UMover` actor component that reads and moves its owning actor through `GetOwner`.
 
 ## Session 04 - Battle Blaster
 
