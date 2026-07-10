@@ -218,3 +218,45 @@ Course section: Bonus: One Last Thing, 1 lecture, about 1m.
 ### Related commits
 
 None yet.
+
+## Supplemental Backlog - Unreal Engine: Creating Widgets for UI
+
+Source: https://www.udemy.com/course/unreal-engine-creating-widgets-for-ui/
+
+Course: Unreal Engine: Creating Widgets for UI
+
+Status: Not started
+
+Course snapshot: 7 sections, 37 lectures, about 3h 31m. Public course page last updated 2023-08. Survival game section: 16 lectures, about 2h 14m.
+
+### Goals
+
+- Learn Unreal Widget Blueprint fundamentals through a small survival game UI workflow.
+- Create start, settings, HUD, score, and end-game menus.
+- Use Save Game and Game Instance data to carry settings between levels.
+- Add survival gameplay elements such as pickups and damage hazards.
+
+### Survival Game Checklist
+
+- [ ] Download or locate the project files attached to the course primer.
+- [ ] Review the survival game scope and set up the project for the course section.
+- [ ] Set up the pawn for the survival game.
+- [ ] Set up the entry/start level that opens when the game starts.
+- [ ] Create the start level menu widget.
+- [ ] Start the entry-level settings menu.
+- [ ] Create or configure the Save Game object.
+- [ ] Create or configure the Game Instance for transferring variables between levels.
+- [ ] Finish the settings menu.
+- [ ] Animate the transition between the start menu and settings menu.
+- [ ] Set up the in-game HUD.
+- [ ] Create the score HUD shown during gameplay.
+- [ ] Set up the end-game widget shown when the game is over.
+- [ ] Apply selected settings to the main level.
+- [ ] Set up survival game pickups.
+- [ ] Create the electricity Blueprint that damages the player.
+- [ ] Check and resolve the Unreal 5 streaming issue noted by the course.
+- [ ] Wrap up the survival game and compare against the final project file if available.
+
+### Related commits
+
+None yet.
