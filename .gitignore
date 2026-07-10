@@ -75,3 +75,7 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# ArtFiles
+Content/UIFastTest/SurvivalProps/*
+Content/UIFastTest/Survival_Character/*
