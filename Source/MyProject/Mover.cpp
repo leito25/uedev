@@ -51,7 +51,5 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 		GetOwner()->SetActorLocation(NewLocation);
 		UE_LOG(LogTemp, Warning, TEXT("Mover is moving %s"), *NewLocation.ToString());
 	}
-	
-	
 }
 

@@ -21,3 +21,8 @@ void AFrontendPlayerController::OnPossess(APawn* aPawn)
 		UE_LOG(LogTemp, Warning, TEXT("OK: %s"), *FoundCameras[0]->GetActorNameOrLabel());
 	}
 }
+
+void AFrontendPlayerController::MyFunctionBPCallable()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Mover is moving %d"), 100);
+}

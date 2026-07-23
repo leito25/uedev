@@ -21,4 +21,10 @@ protected:
 	
 	
 	
+public:
+	UPROPERTY(EditAnywhere)
+	FVector MoveOffset;
+	
+	UFUNCTION(BlueprintCallable)
+	void MyFunctionBPCallable();
 };
