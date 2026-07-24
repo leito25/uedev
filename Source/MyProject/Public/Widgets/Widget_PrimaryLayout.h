@@ -1,4 +1,4 @@
-// Leonardo Quinones - All Right Reserved
+// Leonardo Quinones All Rights Reserved
 
 #pragma once
 
@@ -8,10 +8,10 @@
 #include "Widget_PrimaryLayout.generated.h"
 
 class UCommonActivatableWidgetContainingBase;
-//Class from
 
+//This is the primary Layout
 /**
- *
+ * 
  */
 UCLASS(Abstract, BlueprintType, meta = (DisableNativeTick))
 class MYPROJECT_API UWidget_PrimaryLayout : public UCommonUserWidget

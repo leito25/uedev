@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Leonardo Quinones All Rights Reserved
 
 #pragma once
 
@@ -15,16 +15,17 @@ class MYPROJECT_API AFrontendPlayerController : public APlayerController
 	GENERATED_BODY()
 	
 protected:
-	// ~Begin APlayerController Interface
-	ENGINE_API virtual void OnPossess(APawn* aPawn) override;
-	// ~End APlayerController Interface
+	//virtual void BeginPlay() override; // What Begin to play do!
 	
-	
+	//~ Begin APlayerController Interface
+	virtual void OnPossess(APawn* aPawn) override;
+	//~ End APlayerController Interface
 	
 public:
-	UPROPERTY(EditAnywhere)
-	FVector MoveOffset;
+	//UPROPERTY(EditAnywhere)
+	//FVector MoveOffset;
 	
-	UFUNCTION(BlueprintCallable)
-	void MyFunctionBPCallable();
+	//UFUNCTION(BlueprintCallable)
+	//void MyFunctionBPCallable();
+	
 };

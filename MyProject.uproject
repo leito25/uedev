@@ -12,7 +12,9 @@
 				"Engine",
 				"AIModule",
 				"UMG",
-				"CommonUI"
+				"CommonUI",
+				"Blutility",
+				"DeveloperSettings"
 			]
 		}
 	],
