@@ -8,12 +8,18 @@
 class UWidget_PrimaryLayout;
 struct FGameplayTag;
 class UWidget_ActivatableBase;
+class UFrontendCommonButtonBase;
+
+class UFrontendUISubsystem;
 
 enum class EAsyncPushWidgetState : uint8
 {
 	OnCreateBeforePush,
 	AfterPush
 };
+
+//Events
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnButtonDescriptionTextUpdateDelegate, UFrontendCommonButtonBase*, BroadcastingButton, FText, DescriptionText);
 
 
 /**
@@ -32,6 +38,8 @@ public:
 	virtual bool ShouldCreateSubsystem(UObject* Outer) const override;
 	//~ End USubsystem Interface
 	
+	
+	
 	//variable to hold the primary layout
 	UFUNCTION(BlueprintCallable)
 	void RegisterCreatedPrimaryLayoutWidget(UWidget_PrimaryLayout* InCreatedWidget);
@@ -41,6 +49,11 @@ public:
 		TFunction<void(EAsyncPushWidgetState, UWidget_ActivatableBase*)> AsyncPushStateCallback
 		);
 	
+	
+	
+	// UPRoperty BP for apply and link the description text
+	UPROPERTY(BlueprintAssignable)
+	FOnButtonDescriptionTextUpdateDelegate OnButtonDescriptionTextUpdated;
 	
 private:
 	UPROPERTY(Transient)

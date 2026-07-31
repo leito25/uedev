@@ -24,8 +24,8 @@ void UWidget_PrimaryLayout::RegisterWidgetStack(UPARAM(meta = (Categories = "Fro
 		{
 			RegisteredWidgetStackMap.Add(InStackTag, InStack);
 			
-			Debug::Print(TEXT("Widget Stack Registered under the tag ") + InStackTag.ToString());
-			UE_LOG(LogTemp, Warning, TEXT("Widget Stack with tag: %s"), *InStackTag.ToString());
+			//Debug::Print(TEXT("Widget Stack Registered under the tag ") + InStackTag.ToString());
+			//UE_LOG(LogTemp, Warning, TEXT("Widget Stack with tag: %s"), *InStackTag.ToString());
 		}
 	}
 }
