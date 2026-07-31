@@ -32,17 +32,21 @@ void UFrontendCommonButtonBase::NativeOnCurrentTextStyleChanged()
 void UFrontendCommonButtonBase::NativeOnHovered()
 {
 	Super::NativeOnHovered();
-	
+	OnOffBtn = true;
+	UFrontendUISubsystem::Get(this)->OnButtonDescriptionTextUpdated.Broadcast(this, ButtonDescriptionText, OnOffBtn);
 	if (!ButtonDescriptionText.IsEmpty())
 	{
-		UFrontendUISubsystem::Get(this)->OnButtonDescriptionTextUpdated.Broadcast(this, ButtonDescriptionText);
+		
+		UFrontendUISubsystem::Get(this)->OnButtonDescriptionTextUpdated.Broadcast(this, ButtonDescriptionText, OnOffBtn);
 	}
+	
 }
 
 void UFrontendCommonButtonBase::NativeOnUnhovered()
 {
 	Super::NativeOnUnhovered();
 	
-	UFrontendUISubsystem::Get(this)->OnButtonDescriptionTextUpdated.Broadcast(this, FText::GetEmpty());
-
+	OnOffBtn = false;
+	UFrontendUISubsystem::Get(this)->OnButtonDescriptionTextUpdated.Broadcast(this, FText::GetEmpty(), OnOffBtn);
+	
 }

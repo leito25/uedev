@@ -3,6 +3,7 @@
 
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
+#include "Engine/Texture2D.h"
 #include "FrontendUISubsystem.generated.h"
 
 class UWidget_PrimaryLayout;
@@ -19,7 +20,9 @@ enum class EAsyncPushWidgetState : uint8
 };
 
 //Events
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnButtonDescriptionTextUpdateDelegate, UFrontendCommonButtonBase*, BroadcastingButton, FText, DescriptionText);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnButtonDescriptionTextUpdateDelegate, UFrontendCommonButtonBase*, BroadcastingButton, FText, DescriptionText, bool, OnOff);
+//DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnButtonBtnBackgroundUpdateDelegate, UFrontendCommonButtonBase*, BroadcastingButton, bool, ONOFF);
+//DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnButtonBtnBackgroundUpdateDelegate, UFrontendCommonButtonBase*, BroadcastingButton, UTexture2D*, BackgroundTexture);
 
 
 /**

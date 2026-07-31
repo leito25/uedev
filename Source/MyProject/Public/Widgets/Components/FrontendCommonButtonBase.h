@@ -46,4 +46,7 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Frontend Button", meta = (AllowPrivateAccess = "true"))
 	FText ButtonDescriptionText;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Frontend Button", meta = (AllowPrivateAccess = "true"))
+	bool OnOffBtn;
 };
